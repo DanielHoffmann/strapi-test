@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "FaultCode",
+  "info": {
+    "name": "FaultCode",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "dtcSpnStart": {
+      "type": "integer",
+      "required": true
+    },
+    "dtcSpnEnd": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
