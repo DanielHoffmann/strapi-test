@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "fault_potential_reasons",
   "info": {
-    "name": "FaultPotentialReason"
+    "name": "FaultPotentialReason",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,6 +18,24 @@
     "verificationMethod": {
       "type": "string",
       "required": true
+    },
+    "manualReference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.manual-reference"
+    },
+    "manualReferenceOverride": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fault.manual-reference-override"
+    },
+    "verificationSteps": {
+      "collection": "fault-verification-step"
+    },
+    "verificationStepsOverride": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fault.verification-steps-override"
     }
   }
 }

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "fault_fmis",
   "info": {
-    "name": "FaultFMI"
+    "name": "FaultFmi"
   },
   "options": {
     "increments": true,

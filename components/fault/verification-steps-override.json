@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_fault_verification_steps_overrides",
+  "info": {
+    "name": "verificationStepsOverride",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "filter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.filter",
+      "required": true
+    },
+    "verificationSteps": {
+      "collection": "fault-verification-step"
+    }
+  }
+}

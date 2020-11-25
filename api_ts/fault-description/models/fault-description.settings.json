@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "fault_descriptions",
   "info": {
-    "name": "FaultDescription"
+    "name": "FaultDescription",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -38,6 +39,23 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "fmi": {
+      "model": "fault-fmi"
+    },
+    "systemReaction": {
+      "model": "fault-system-reaction"
+    },
+    "potentialReasons": {
+      "collection": "fault-potential-reason"
+    },
+    "potentialReasonsOverride": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fault.potential-reasons-override"
+    },
+    "triggers": {
+      "collection": "fault-trigger"
     }
   }
 }

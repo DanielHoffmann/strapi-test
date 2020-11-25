@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_fault_manual_reference_overrides",
+  "info": {
+    "name": "manualReferenceOverride",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "filter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.filter",
+      "required": true
+    },
+    "manualReference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.manual-reference"
+    }
+  }
+}

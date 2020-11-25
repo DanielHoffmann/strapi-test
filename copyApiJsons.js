@@ -54,18 +54,33 @@ if (process.argv.find((v) => v === "--watch" || v === "-w")) {
         });
     }
   });
+
   // when using the Content-types Builder it writes to api/modelName/models/modelName.settings.json
   // we want to get that file back into api_ts
-  chokidar.watch("api/**/*.settings.json", {}).on("all", (event, filePath) => {
-    if (event === "add" || event === "change") {
-      copyFile(filePath, "api", "api_ts")
-        .then(() => {
-          console.log(`Copied ${filePath}`);
-        })
-        .catch((err) => {
-          console.error(`Error copying ${filePath}: ${err}`);
-        });
-    }
+  const files = findFilesByExtRecursive(
+    path.resolve("api_ts"),
+    "settings.json"
+  );
+  Promise.all(
+    files.map((file) => {
+      // copy .settings.json files to /api/
+      return copyFile(file, "api_ts", "api");
+    })
+  ).then(() => {
+    // listen for changes in /api/**/*.settings.json and copy them to /api_ts
+    chokidar
+      .watch("api/**/*.settings.json", {})
+      .on("all", (event, filePath) => {
+        if (event === "add" || event === "change") {
+          copyFile(filePath, "api", "api_ts")
+            .then(() => {
+              console.log(`Copied ${filePath}`);
+            })
+            .catch((err) => {
+              console.error(`Error copying ${filePath}: ${err}`);
+            });
+        }
+      });
   });
 } else {
   const files = findFilesByExtRecursive(path.resolve("api_ts"), "json");

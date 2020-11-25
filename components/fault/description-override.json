@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_fault_description_overrides",
+  "info": {
+    "name": "DescriptionOverride",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "filter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.filter",
+      "required": true
+    },
+    "description": {
+      "model": "fault-description"
+    }
+  }
+}

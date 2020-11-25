@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "fault_codes",
   "info": {
-    "name": "FaultCode"
+    "name": "FaultCode",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,6 +22,14 @@
       "required": true,
       "unique": true,
       "min": 0
+    },
+    "description": {
+      "model": "fault-description"
+    },
+    "descriptionOverride": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fault.description-override"
     }
   }
 }
