@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_fmis",
+  "info": {
+    "name": "FaultFMI"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

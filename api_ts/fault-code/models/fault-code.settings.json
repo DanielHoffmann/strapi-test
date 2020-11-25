@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "FaultCode",
+  "collectionName": "fault_codes",
   "info": {
-    "name": "FaultCode",
-    "description": ""
+    "name": "FaultCode"
   },
   "options": {
     "increments": true,
@@ -13,11 +12,15 @@
   "attributes": {
     "dtcSpnStart": {
       "type": "integer",
-      "required": true
+      "required": true,
+      "unique": true,
+      "min": 0
     },
     "dtcSpnEnd": {
       "type": "integer",
-      "required": true
+      "required": true,
+      "unique": true,
+      "min": 0
     }
   }
 }

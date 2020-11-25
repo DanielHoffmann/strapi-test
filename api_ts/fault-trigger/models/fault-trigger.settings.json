@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_triggers",
+  "info": {
+    "name": "FaultTrigger"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

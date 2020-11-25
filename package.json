@@ -8,7 +8,7 @@
     "develop": "concurrently \"yarn run api-watch\" \"nodemon --ignore api_ts/ server.js\"",
     "debug": "concurrently \"yarn run api-watch\" \"nodemon --inspect=0.0.0.0:9229 --ignore api_ts/ server.js\"",
     "start": "strapi start",
-    "codegen": "sts api_ts/ -o api_ts/types",
+    "codegen": "sts api_ts/ -g components/ -o api_ts/types",
     "type-check": "tsc --noEmit",
     "build": "yarn run codegen && tsc && node copyApiJsons.js && strapi build",
     "postgres": "docker run --name nv-cms -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres"

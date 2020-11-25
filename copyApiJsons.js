@@ -3,9 +3,9 @@ const fs = require("fs");
 const path = require("path");
 const cwd = process.cwd();
 
-function copyFile(filePath) {
+function copyFile(filePath, from, to) {
   const sourcePath = path.resolve(cwd, filePath);
-  const finalPath = path.resolve(cwd, filePath.replace("api_ts", "api"));
+  const finalPath = path.resolve(cwd, filePath.replace(from, to));
   if (!fs.existsSync(path.dirname(finalPath))) {
     fs.mkdirSync(path.dirname(finalPath), { recursive: true });
   }
@@ -43,24 +43,35 @@ function findFilesByExtRecursive(base, ext, files, result) {
 }
 
 if (process.argv.find((v) => v === "--watch" || v === "-w")) {
-  const watcher = chokidar
-    .watch("api_ts/**/*.json", {})
-    .on("all", (event, filePath) => {
-      if (event === "add" || event === "change") {
-        copyFile(filePath)
-          .then(() => {
-            console.log(`Copied ${filePath}`);
-          })
-          .catch((err) => {
-            console.error(`Error copying ${filePath}: ${err}`);
-          });
-      }
-    });
+  chokidar.watch("api_ts/**/routes.json", {}).on("all", (event, filePath) => {
+    if (event === "add" || event === "change") {
+      copyFile(filePath, "api_ts", "api")
+        .then(() => {
+          console.log(`Copied ${filePath}`);
+        })
+        .catch((err) => {
+          console.error(`Error copying ${filePath}: ${err}`);
+        });
+    }
+  });
+  // when using the Content-types Builder it writes to api/modelName/models/modelName.settings.json
+  // we want to get that file back into api_ts
+  chokidar.watch("api/**/*.settings.json", {}).on("all", (event, filePath) => {
+    if (event === "add" || event === "change") {
+      copyFile(filePath, "api", "api_ts")
+        .then(() => {
+          console.log(`Copied ${filePath}`);
+        })
+        .catch((err) => {
+          console.error(`Error copying ${filePath}: ${err}`);
+        });
+    }
+  });
 } else {
   const files = findFilesByExtRecursive(path.resolve("api_ts"), "json");
   Promise.all(
     files.map((file) => {
-      return copyFile(file);
+      return copyFile(file, "api_ts", "api");
     })
   )
     .then(() => {

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_descriptions",
+  "info": {
+    "name": "FaultDescription"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bmsDtc": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "redStopLamp": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "amberWarningLamp": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "internal": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "removed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

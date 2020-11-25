@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_fault_code_filter_filters",
+  "info": {
+    "name": "Filter",
+    "icon": "hashtag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "generation": {
+      "type": "enumeration",
+      "enum": [
+        "C",
+        "D"
+      ]
+    },
+    "product": {
+      "type": "enumeration",
+      "enum": [
+        "B4",
+        "B5"
+      ]
+    }
+  }
+}

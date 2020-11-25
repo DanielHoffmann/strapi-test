@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_potential_reasons",
+  "info": {
+    "name": "FaultPotentialReason"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "potentialReason": {
+      "type": "string",
+      "required": true
+    },
+    "verificationMethod": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
