@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fault-fmis",
+      "handler": "fault-fmi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-fmis/count",
+      "handler": "fault-fmi.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-fmis/:id",
+      "handler": "fault-fmi.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fault-fmis",
+      "handler": "fault-fmi.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fault-fmis/:id",
+      "handler": "fault-fmi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fault-fmis/:id",
+      "handler": "fault-fmi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

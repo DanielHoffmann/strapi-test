@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "fault_fmis",
   "info": {
-    "name": "FaultFmi",
-    "description": ""
+    "name": "FaultFmi"
   },
   "options": {
     "increments": true,
@@ -15,10 +14,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "label": {
-      "type": "string",
-      "required": true
     }
   }
 }

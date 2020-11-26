@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "fault_fmis",
+  "collectionName": "fault_verification_steps",
   "info": {
-    "name": "FaultFmi",
-    "description": ""
+    "name": "FaultVerificationStep"
   },
   "options": {
     "increments": true,
@@ -11,12 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "code": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "label": {
+    "instructionHeading": {
       "type": "string",
       "required": true
     }

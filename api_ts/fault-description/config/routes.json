@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fault-descriptions",
+      "handler": "fault-description.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-descriptions/count",
+      "handler": "fault-description.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-descriptions/:id",
+      "handler": "fault-description.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fault-descriptions",
+      "handler": "fault-description.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fault-descriptions/:id",
+      "handler": "fault-description.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fault-descriptions/:id",
+      "handler": "fault-description.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

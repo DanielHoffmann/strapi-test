@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "fault_fmis",
+  "collectionName": "fault_potential_reasons",
   "info": {
-    "name": "FaultFmi",
-    "description": ""
+    "name": "FaultPotentialReason"
   },
   "options": {
     "increments": true,
@@ -11,12 +10,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "code": {
+    "potentialReason": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
-    "label": {
+    "verificationMethod": {
       "type": "string",
       "required": true
     }

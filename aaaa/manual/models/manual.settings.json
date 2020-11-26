@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "fault_fmis",
+  "collectionName": "manuals",
   "info": {
-    "name": "FaultFmi",
-    "description": ""
+    "name": "Manual"
   },
   "options": {
     "increments": true,
@@ -11,12 +10,12 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "code": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "label": {
+    "paligoId": {
       "type": "string",
       "required": true
     }

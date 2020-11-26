@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "fault_fmis",
+  "collectionName": "fault_system_reactions",
   "info": {
-    "name": "FaultFmi",
-    "description": ""
+    "name": "FaultSystemReaction"
   },
   "options": {
     "increments": true,
@@ -15,10 +14,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "label": {
-      "type": "string",
-      "required": true
     }
   }
 }

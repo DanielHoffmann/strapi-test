@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fault-verification-steps",
+      "handler": "fault-verification-step.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-verification-steps/count",
+      "handler": "fault-verification-step.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fault-verification-steps/:id",
+      "handler": "fault-verification-step.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fault-verification-steps",
+      "handler": "fault-verification-step.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fault-verification-steps/:id",
+      "handler": "fault-verification-step.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fault-verification-steps/:id",
+      "handler": "fault-verification-step.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
