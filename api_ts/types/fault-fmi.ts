@@ -4,4 +4,5 @@
 export interface IFaultFmi {
   id: string;
   code: string;
+  label: string;
 }
