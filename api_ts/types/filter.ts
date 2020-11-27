@@ -1,8 +1,15 @@
+import { IGeneration } from './generation';
+import { IProduct } from './product';
+import { IServiceLevel } from './service-level';
+
 /**
  * Model definition for Filter
  */
 export interface IFilter {
   id: string;
-  generation?: "C" | "D";
-  product?: "B4" | "B5";
+  minVersion?: string;
+  maxVersion?: string;
+  generations: IGeneration[];
+  products: IProduct[];
+  serviceLevels: IServiceLevel[];
 }

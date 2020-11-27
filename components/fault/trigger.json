@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_fault_triggers",
+  "info": {
+    "name": "Trigger",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "potentialReasons": {
+      "collection": "fault-potential-reason"
+    }
+  }
+}

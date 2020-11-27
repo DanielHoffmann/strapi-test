@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "manuals",
+  "collectionName": "products",
   "info": {
-    "name": "Manual"
+    "name": "Product"
   },
   "options": {
     "increments": true,
@@ -10,14 +10,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "code": {
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "paligoId": {
-      "type": "string",
-      "required": true
     }
   }
 }

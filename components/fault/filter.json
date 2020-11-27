@@ -1,25 +1,28 @@
 {
-  "collectionName": "components_fault_code_filter_filters",
+  "collectionName": "components_fault_filters",
   "info": {
     "name": "Filter",
-    "icon": "hashtag",
+    "icon": "address-card",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "generation": {
-      "type": "enumeration",
-      "enum": [
-        "C",
-        "D"
-      ]
+    "minVersion": {
+      "type": "string",
+      "regex": "^([0-9]+)\\.([0-9]+)\\.([0-9]+)$"
     },
-    "product": {
-      "type": "enumeration",
-      "enum": [
-        "B4",
-        "B5"
-      ]
+    "maxVersion": {
+      "type": "string",
+      "regex": "^([0-9]+)\\.([0-9]+)\\.([0-9]+)$"
+    },
+    "generations": {
+      "collection": "generation"
+    },
+    "products": {
+      "collection": "product"
+    },
+    "serviceLevels": {
+      "collection": "service-level"
     }
   }
 }

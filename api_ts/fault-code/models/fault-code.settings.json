@@ -24,7 +24,10 @@
       "min": 0
     },
     "description": {
-      "model": "fault-description"
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.description",
+      "required": true
     },
     "descriptionOverride": {
       "type": "component",

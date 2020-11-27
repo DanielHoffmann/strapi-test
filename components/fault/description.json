@@ -1,15 +1,11 @@
 {
-  "kind": "collectionType",
-  "collectionName": "fault_descriptions",
+  "collectionName": "components_descriptions",
   "info": {
-    "name": "FaultDescription",
+    "name": "Description",
+    "icon": "address-book",
     "description": ""
   },
-  "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
-  },
+  "options": {},
   "attributes": {
     "bmsDtc": {
       "type": "string",
@@ -17,7 +13,7 @@
       "unique": true
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "redStopLamp": {
@@ -45,14 +41,6 @@
     },
     "systemReaction": {
       "model": "fault-system-reaction"
-    },
-    "potentialReasons": {
-      "collection": "fault-potential-reason"
-    },
-    "potentialReasonsOverride": {
-      "type": "component",
-      "repeatable": true,
-      "component": "fault.potential-reasons-override"
     },
     "triggers": {
       "collection": "fault-trigger"

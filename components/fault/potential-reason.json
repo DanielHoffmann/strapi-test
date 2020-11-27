@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_fault_potential_reasons",
+  "info": {
+    "name": "PotentialReason",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "verificationMethod": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_fault_description_overrides",
+  "collectionName": "components_fault_potential_reason_overrides",
   "info": {
-    "name": "DescriptionOverride",
-    "icon": "adjust",
+    "name": "PotentialReasonOverride",
+    "icon": "air-freshener",
     "description": ""
   },
   "options": {},
@@ -13,10 +13,10 @@
       "component": "fault.filter",
       "required": true
     },
-    "description": {
+    "potentialReason": {
       "type": "component",
       "repeatable": false,
-      "component": "fault.description",
+      "component": "fault.potential-reason",
       "required": true
     }
   }

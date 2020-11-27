@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_fault_manual_reference_overrides",
+  "collectionName": "components_fault_trigger_overrides",
   "info": {
-    "name": "manualReferenceOverride",
-    "icon": "adjust",
+    "name": "TriggerOverrides",
+    "icon": "align-center",
     "description": ""
   },
   "options": {},
@@ -13,10 +13,11 @@
       "component": "fault.filter",
       "required": true
     },
-    "manualReference": {
+    "trigger": {
       "type": "component",
-      "repeatable": false,
-      "component": "fault.manual-reference"
+      "repeatable": true,
+      "component": "fault.trigger",
+      "required": true
     }
   }
 }

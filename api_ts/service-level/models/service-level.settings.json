@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "fault_potential_reasons",
+  "collectionName": "service_levels",
   "info": {
-    "name": "FaultPotentialReason",
-    "description": ""
+    "name": "ServiceLevel"
   },
   "options": {
     "increments": true,
@@ -11,9 +10,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "potentialReason": {
+    "code": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     }
   }
 }
