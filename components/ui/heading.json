@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_ui_headings",
+  "info": {
+    "name": "Heading",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ui_images",
+  "info": {
+    "name": "image",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    }
+  }
+}
