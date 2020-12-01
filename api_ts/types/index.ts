@@ -5,7 +5,6 @@ export * from './fault-fmi';
 export * from './fault-potential-reason';
 export * from './fault-system-reaction';
 export * from './fault-trigger';
-export * from './fault-verification-step';
 export * from './filter';
 export * from './generation';
 export * from './potential-reason';
