@@ -1,10 +1,14 @@
-module.exports = ({ env }) => ({
-  host: env("HOST", "0.0.0.0"),
-  port: env.int("PORT", 1337),
-  admin: {
-    auth: {
-      path: "/admin",
-      secret: env("ADMIN_JWT_SECRET", "aa921d8667cae261b1432301275ce455"),
+module.exports = ({ env }) => {
+  return {
+    host: "0.0.0.0",
+    port: 3000,
+    url: "http://localhost:3000/",
+    admin: {
+      port: 1337,
+      url: "/admin",
+      auth: {
+        secret: env("ADMIN_JWT_SECRET", "9f01143a0afbad42edcb8ec3f8918328"),
+      },
     },
-  },
-});
+  };
+};

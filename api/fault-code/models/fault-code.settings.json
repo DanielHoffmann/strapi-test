@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_codes",
+  "info": {
+    "name": "FaultCode",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "dtcSpnStart": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0
+    },
+    "dtcSpnEnd": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0
+    },
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fault.description",
+      "required": true
+    },
+    "descriptionOverride": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fault.description-override"
+    }
+  }
+}
