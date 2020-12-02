@@ -6,6 +6,7 @@
   "scripts": {
     "api-watch": "concurrently \"tsc -w\" \"node copyApiJsons.js --watch\"",
     "develop": "concurrently \"yarn run api-watch\" \"nodemon --ignore api_ts/ server.js\"",
+    "develop-admin": "strapi watch-admin",
     "debug": "concurrently \"yarn run api-watch\" \"nodemon --inspect=0.0.0.0:9229 --ignore api_ts/ server.js\"",
     "start": "strapi start",
     "codegen": "sts api_ts/ -g components/ -o api_ts/types",
